@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Events</title>
+</head>
+<body>
+<h1>Navigation Events Example</h1>
+<button onclick="goBack()">Go Back</button>
+<button onclick="goForward()">Go Forward</button>
+<script>
+function goBack() {
+// Navigate back in history
+window.history.back();
+}
+function goForward() {
+// Navigate forward in history
+window.history.forward();
+}
+// Event listener for navigation changes
+window.addEventListener("popstate", function(event) {
+alert("Navigation state changed!");
+});
+</script>
+</body>
+</html>
